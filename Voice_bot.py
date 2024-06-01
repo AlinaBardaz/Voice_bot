@@ -9,7 +9,7 @@ import pyttsx3
 TOKEN = "Место для вашего токена"
 
 def convert_text_to_audio(text):
-    """Converts text to audio and returns the path to the audio file."""
+    """Конвертирует текстовое сообщение в аудио."""
     engine = pyttsx3.init()
     tmp_file_name = f"sms_{int(time.time())}"
     file_path = f"data/{tmp_file_name}.mp3"
@@ -24,10 +24,10 @@ async def help(update, context):
     await update.message.reply_text("Бот создан для преобразования текста в голосовое сообщение")
 
 async def start(update, context):
-    await update.message.reply_text("Я и так включен, давай свой текст")
+    await update.message.reply_text("Я уже включен, напишите свой текст")
 
 async def echo(update, context):
-    """Echo the user message."""
+    """Функция Эхо"""
     text = update.message.text
     audio_file_path = convert_text_to_audio(text)
     await context.bot.send_audio(chat_id=update.effective_chat.id, audio=open(audio_file_path, 'rb'))
