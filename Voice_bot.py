@@ -1,12 +1,9 @@
-import logging
 import time
 import os
-
-from telegram import Update
-from telegram.ext import Application, ApplicationBuilder, CommandHandler, MessageHandler, filters
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 import pyttsx3
 
-TOKEN = "7122328284:AAHpZEAIWSV0u2exmvEBQ2cymTqSxHZXXzQ"
+TOKEN = "Ваш токен"
 
 def convert_text_to_audio(text):
     """Converts text to audio and returns the path to the audio file."""
