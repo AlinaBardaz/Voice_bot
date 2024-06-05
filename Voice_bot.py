@@ -24,7 +24,7 @@ async def help(update, context):
     await update.message.reply_text("Бот создан для преобразования текста в голосовое сообщение")
 
 async def start(update, context):
-    await update.message.reply_text("Я и так включен, давай свой текст")
+    await update.message.reply_text("Я уже включен, напишите свой текст")
 
 async def echo(update, context):
     """Echo the user message."""
